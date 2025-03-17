@@ -1,0 +1,85 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+
+<!-- <h1>Home Page</h1> -->
+<!-- {% if request.user.is_authenticated %}
+<h5>{{request.user}}</h5>
+<a href="{% url 'logout' %}">Logout</a>
+{% else %}
+<a href="{% url 'login' %}">Login</a>
+{% endif %} -->
+<!-- Hero Section -->
+<div class="mt-10 hero section1">
+    <h1>Welcome to WellCare Management System</h1>
+    <p>Predict your health conditions and get the best care recommendations.</p>
+</div>
+
+<!-- Services Section -->
+<div class="container section" id="services">
+    <h2 class="text-center mb-4r">Our Services</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card bg-light text-dark p-3">
+                <h4>Disease Prediction</h4>
+                <p>Get AI-powered disease predictions based on your symptoms.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-light text-dark p-3">
+                <h4>Health Tips</h4>
+                <p>Receive personalized workout and diet plans for a healthier lifestyle.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-light text-dark p-3">
+                <h4>Medications</h4>
+                <p>Get suggestions for medications based on your health conditions.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Testimonials Section -->
+
+
+<!-- FAQs Section -->
+<div class="container section" id="faq">
+    <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+    <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                    How accurate is the disease prediction?
+                </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse show">
+                <div class="accordion-body">
+                    Our AI model provides high accuracy but should not replace professional medical advice.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq2">
+                    Is WellCare free to use?
+                </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    Yes! Basic services are free, but premium features are available for advanced users.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2025 WellCare Management System. All rights reserved.</p>
+</footer>
+
+{% endblock %}
