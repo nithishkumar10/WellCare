@@ -58,16 +58,8 @@ def login_user(request):
         passw = request.POST.get('password')
         try:
             user = User.objects.get(username=username)
-            print(user)
-            print(user.username)
-            print(user.password)
-            print("-------")
-            print(username)
-            print(passw)
             if user.password == passw:
                 # user = authenticate(request, username=username, password=passw)
-                print("-----")
-                print(user)
                 login(request, user)
                 return redirect('user-dashboard')
             else:
